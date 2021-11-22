@@ -1,0 +1,48 @@
+.stacke-card{
+    background: url('../img/card.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px rgba(37, 117, 237, 0.5);
+    margin: 20px 18px;
+    min-width: 250px;
+    &__head{
+        padding: 13px 20px;
+    }
+    &__title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+    &__value{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+    }
+    &__foot{
+        padding: 13px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        a{
+            padding: 10px 0;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    #reflink{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+    }
+}

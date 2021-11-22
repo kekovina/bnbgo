@@ -1,0 +1,234 @@
+.referal{
+    padding: 100px 0;
+    &-wrap{
+        @include respondto(500){
+            justify-content: center;
+        }
+    }
+    & .container{
+        background: url(../img/refline.png);
+        background-repeat: no-repeat;
+        background-position-x: 275px;
+        @include respondto(992){
+            background: none;
+        }
+    }
+    &-user-img{
+        position: relative;
+        width: fit-content;
+        @include respondto(500){
+            display: none;
+        }
+        & #ref-arc{
+            position: absolute;
+            left: 115px
+        }
+    }
+    &__percent-card{
+        background: url(../img/ref-card.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        max-width: 235px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 11px 11px 11px 40px;
+        word-wrap: break-word;
+        position: relative;
+        margin: 7px 0;
+        &:nth-child(2){
+            margin-left: 25px;
+        }
+        &:nth-child(3){
+            margin-left: 40px;
+        }
+        &:nth-child(4){
+            margin-left: 25px;
+        }
+        @include respondto(500){
+            &:nth-child(2){
+                margin-left: 0
+            }
+            &:nth-child(3){
+                margin-left: 0
+            }
+            &:nth-child(4){
+                margin-left: 0
+            }
+        }
+    }
+}
+.percent-card{
+    &__percent{
+        position: absolute;
+        border-radius: 50%;
+        height: 56px;
+        width: 56px;
+        left: -25px;
+        top: 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 56px;
+        text-align: center;
+        & span{
+            font-size: 14px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                @include respondto(500){
+                    display: none;
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 3px;
+                @include respondto(500){
+                    display: none;
+                }
+            }
+        }
+        &--green{
+            background: #71C46B;
+            box-shadow: 0px 0px 6px #71C36B;
+            & span::before{
+                top: 50px;
+                left: -70px;
+                background: #71C46B;
+                box-shadow: 0px 0px 6px #71C36B;
+            }
+            & span::after{
+                width: 55px;
+                height: 3px;
+                bottom: -22px;
+                left: -74px;
+                transform: rotate(314deg);
+                background: #71C46B;
+                box-shadow: 0px 0px 6px #71c36b;
+            }
+        }
+        &--purple{
+            background: #ED24C2;
+            box-shadow: 0px 0px 6px #ED24C2;
+            & span::before{
+                top: 25px;
+                left: -57px;
+                background: #ED24C2;
+                box-shadow: 0px 0px 6px #ED24C2;
+            }
+            & span::after{
+                width: 34px;
+                height: 3px;
+                bottom: -7px;
+                left: -57px;
+                transform: rotate(322deg);
+                background: #ED24C2;
+                box-shadow: 0px 0px 6px #ed24c2;
+            }
+        }
+        &--lightblue{
+            background: #3AC5D6;
+            box-shadow: 0px 0px 6px #3AC5D6;
+            & span::before{
+                top: -15px;
+                left: -59px;
+                background: #3AC5D6;
+                box-shadow: 0px 0px 6px #3AC5D6;
+            }
+            & span::after{
+                width: 35px;
+                height: 3px;
+                bottom: 17px;
+                left: -61px;
+                transform: rotate(222deg);
+                background: #3AC5D6;
+                box-shadow: 0px 0px 6px #3ac5d6;
+            }
+        }
+        &--blue{
+            background: #4775FF;
+            box-shadow: 0px 0px 5px #4775FF;
+            & span::before{
+                top: 0px;
+                left: -62px;
+                background: #4775FF;
+                box-shadow: 0px 0px 6px #4775FF;
+            }
+            & span::after{
+                width: 31px;
+                height: 3px;
+                bottom: 10px;
+                left: -61px;
+                background: #4775FF;
+                box-shadow: 0px 0px 6px #4775ff;
+            }
+        }
+        &--orange{
+            background: #FF8A2D;
+            box-shadow: 0px 0px 5px #FF8A2D;
+            & span::before{
+                top: -39px;
+                left: -70px;
+                background: #FF8A2D;
+                box-shadow: 0px 0px 6px #FF8A2D;
+            }
+            & span::after{
+                width: 55px;
+                height: 3px;
+                bottom: 32px;
+                left: -74px;
+                transform: rotate(225deg);
+                background: #FF8A2D;
+                box-shadow: 0px 0px 6px #ff8a2d;
+            }
+        }
+    }
+}
+.stats-card{
+    position: relative;
+    margin: 15px 0;
+    @include respondto(500){
+        margin-left: -25px;
+    }
+    & img{
+        position: absolute;
+    }
+    &__title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__value{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    &:nth-child(1){ 
+        align-self: center;
+    }
+    &:nth-child(2){ 
+        align-self: flex-end;
+        @include respondto(500){
+            align-self: center
+        }
+    }
+    &:nth-child(3){ 
+        @include respondto(500){
+        align-self: center
+        }   
+    }
+    &__content{
+        @include respondto(500){
+            margin-left: 70px;
+        }
+    }
+}

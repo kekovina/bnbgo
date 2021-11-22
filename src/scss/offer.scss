@@ -1,0 +1,110 @@
+.offer-card{
+    background: url(../img/offer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    margin-top: 50px;
+    @include respondto(768){
+        max-width: 320px;
+        margin: 25px auto;
+    }
+    &__top{
+        padding: 26px 60px 26px 60px;
+        @include respondto(1200){ 
+            padding: 26px 30px 26px 30px;
+        }
+        @include respondto(992){ 
+            padding: 26px 10px 26px 10px;
+        }
+    }
+    &__bottom{
+        padding: 20px 60px;
+        & a {
+            width: 60%; 
+            margin: 10px auto;
+        }
+        @include respondto(1200){ 
+            padding: 20px 30px 20px 30px;
+        }
+        @include respondto(992){ 
+            padding: 20px 10px 20px 10px;
+        }
+    }
+    &__line{
+        border-bottom: 2px solid #ED24C2;
+        box-shadow: 0px 0px 4px #ED24C2;
+    }
+    &__time{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        & span{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFD046;
+        }
+    }
+    &__row{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        & div:nth-child(2){
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFD046;
+            @include respondto(sm){ 
+                font-size: 16px;
+            }
+        }
+    }
+    &__head{
+        position: relative;
+        min-height:90px;
+        & svg{
+            height: 160px;
+            width: 160px;
+            position: absolute;
+            top: -42px;
+            left: 53%;
+            transform: translate(-50%)
+        }
+    }
+    &__circle{
+        background: url(../img/circle.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 160px;
+        width: 160px;
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        transform: translate(-50%)
+    }
+    &__text{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: -10px;
+        & .percents{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 49px;
+            color: #FFD046
+        }
+        & .profit{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

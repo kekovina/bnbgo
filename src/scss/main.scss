@@ -1,0 +1,181 @@
+@import "_vendor.scss";
+@import "_fonts.scss";
+
+@import "~bootstrap/scss/bootstrap";
+@import "responsive";
+@import "custom";
+
+@import "header";
+@import "about";
+@import "offer";
+@import "stake";
+@import "deposit";
+@import "referal";
+
+body{
+    background: linear-gradient(90deg, #1C083A 0%, #2C1365 100%);
+    font-family: 'Montserrat';
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+body *{
+    z-index: 10;
+}
+body::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+main{
+    flex: 1;
+    z-index: 1
+}
+footer{
+    background: rgba(255, 255, 255, 0.05);
+    line-height: 74px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btn-yellow{
+    background: #F4B421;
+    border: 1px solid #F4B421;
+    box-sizing: border-box;
+    border-radius: 200px;
+    display:block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 10px 0;
+    text-align: center;
+    transition: all .25s ease-out
+}
+.btn-yellow:hover{
+    color: #F4B421;
+    background: transparent;
+    transition: all .25s ease-in
+}
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background: #00000075;
+    z-index: 1000;
+}
+.section{
+    &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    &__description{
+        font-style: normal;
+        margin-top: 8px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+input[type="text"]{
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid #ED24C2;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 6px #ED24C2);
+    border-radius: 2px;
+    outline: none;
+    caret-color: #ED24C2;
+    padding: 6px;
+    color: #ED24C2;
+    font-weight: 700;
+    max-width: 140px
+}
+input[type="text"]::placeholder{
+    color: #f635cc9a
+}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.bnb-img{
+    position: absolute;
+    top: 255px;
+    right: 272px;
+    height: auto;
+}
+.rotate-wrap{
+    position: relative;
+    width: 128px;
+    height: 128px;
+    margin-top: -128px;
+}
+#rotate-1{
+    top: -10px;
+    right: -9px;
+    transform-origin: 50% 50%;
+    animation: rotate infinite 2s linear;
+}
+#rotate-2{
+    top: -20px;
+    right: -19px;
+    transform-origin: 50% 50%;
+    animation: rotate infinite reverse 1s linear;
+}
+#rotate-3{
+    top: -30px;
+    right: -29px;
+    transform-origin: 50% 92px;
+    animation: rotate infinite 1s linear;
+}
+#rotate-4{
+    top: -39px;
+    right: -39px;
+    animation: rotate infinite reverse 4s linear;
+}
+#rotate-5{
+    top: -47px;
+    right: -45px;
+    animation: rotate infinite 2s linear;
+}
+.head-image{
+    position: absolute;
+    height: 520px;
+    right: 0;
+    top: -160px;
+    width: 700px;
+    @include respondto(xs, sm, md){
+        display: none;
+    }
+    &__wrap{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
