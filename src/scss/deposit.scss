@@ -71,12 +71,12 @@
         height: 80px;
         width: 80px;
         position: relative;
-        & img{
+        & svg{
             position: absolute;
             width: 70px;
             height: 70px;
             top: 5px;
-            left: -2px;
+            left: 5px;
         }
         &-text{
             font-style: normal;

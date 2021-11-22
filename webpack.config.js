@@ -43,14 +43,14 @@ const plugins = () => {
         new MiniCssExtractPlugin({
             filename: `css/${filename('css')}`
         }),
-        new CopyWebpackPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, 'src/assets'),
-                    to: path.resolve(__dirname, 'app/assets')
-                }
-            ]
-        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         {
+        //             from: path.resolve(__dirname, 'src/img'),
+        //             to: path.resolve(__dirname, 'app/img')
+        //         }
+        //     ]
+        // }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
@@ -71,16 +71,6 @@ const plugins = () => {
                     ["gifsicle", { interlaced: true }],
                     ["jpegtran", { progressive: true }],
                     ["optipng", { optimizationLevel: 5 }],
-                    [
-                      "svgo",
-                      {
-                        plugins: [
-                          {
-                            removeViewBox: false
-                          }
-                        ]
-                      }
-                    ]
                   ]
                 }
               })
@@ -121,7 +111,19 @@ module.exports = {
                             sources: true
                         }
                     },
-                'markup-inline-loader'],
+                {
+                    loader: 'markup-inline-loader', 
+                    options: {
+                        "svgo":
+                        {
+                          plugins: [
+                            {
+                              removeViewBox: false
+                            }
+                          ]
+                        }
+                    }
+                }],
                 
             },
             {
@@ -147,6 +149,15 @@ module.exports = {
                 }, 
                 'css-loader', 
                 'sass-loader']
+            },
+            {
+                test: /\.(?:svg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options:{
+                        name: `./img/${filename('[ext]')}`
+                    }
+                }]
             },
             {
                 test: /\.(?:|gif|png|jpg|jpeg)$/,
