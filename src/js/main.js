@@ -13,4 +13,10 @@ $('.header__mobile-menu-btn').on('click', () => {
 $('.overlay').on('click', () => {
     $('.overlay').fadeOut(500);
     $('.header__menu--mobile').removeClass('header__menu--open')
+    $('.connect-modal').removeClass('connect-modal--show')
+})
+$('.btn-connect').on('click', () => {
+    $('.connect-modal').addClass('connect-modal--show')
+    $('.header__menu--mobile').removeClass('header__menu--open')
+    $('.overlay').fadeIn(1000);
 })

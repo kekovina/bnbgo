@@ -11,6 +11,7 @@
 @import "stake";
 @import "deposit";
 @import "referal";
+@import "modal";
 
 body{
     background: linear-gradient(90deg, #1C083A 0%, #2C1365 100%);
@@ -103,12 +104,15 @@ input[type="text"]{
     outline: none;
     caret-color: #ED24C2;
     padding: 6px;
-    color: #ED24C2;
+    color: white;
     font-weight: 700;
-    max-width: 140px
+    max-width: 140px;
+    @include respondto(768){
+        max-width: 190px;
+    }
 }
 input[type="text"]::placeholder{
-    color: #f635cc9a
+    color: white;
 }
 :active, :hover, :focus {
     outline: 0;
@@ -130,29 +134,29 @@ input[type="text"]::placeholder{
     top: -10px;
     right: -9px;
     transform-origin: 50% 50%;
-    animation: rotate infinite 2s linear;
+    animation: rotate infinite 4s linear;
 }
 #rotate-2{
     top: -20px;
     right: -19px;
     transform-origin: 50% 50%;
-    animation: rotate infinite reverse 1s linear;
+    animation: rotate infinite reverse 2s linear;
 }
 #rotate-3{
     top: -30px;
     right: -29px;
     transform-origin: 50% 92px;
-    animation: rotate infinite 1s linear;
+    animation: rotate infinite 2s linear;
 }
 #rotate-4{
     top: -39px;
     right: -39px;
-    animation: rotate infinite reverse 4s linear;
+    animation: rotate infinite reverse 8s linear;
 }
 #rotate-5{
     top: -47px;
     right: -45px;
-    animation: rotate infinite 2s linear;
+    animation: rotate infinite 4s linear;
 }
 .head-image{
     position: absolute;

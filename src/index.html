@@ -15,7 +15,7 @@
                     <a href="#">Audit</a>
                     <a href="#">Contract</a>
                     <a href="#">Social</a>
-                    <a class="btn-yellow" href="#">Connect</a>
+                    <a class="btn-yellow btn-connect" href="#">Connect</a>
                 </div>
                 <div class="header__mobile-menu-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -89,10 +89,12 @@
                         <div class="offer-card">
                             <div class="offer-card__head">
                                 <div class="offer-card__circle"></div>
-                                <img markup-inline src="/img/rounder-yellow.svg" alt="">
                                 <div class="offer-card__text">
                                     <div class="percents">12<span>%</span></div>
                                     <div class="profit">Daily Profit</div>
+                                    <div class="offer-card__rounder-wrap">
+                                        <img markup-inline src="/img/rounder-yellow.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="offer-card__content">
@@ -132,10 +134,12 @@
                         <div class="offer-card">
                             <div class="offer-card__head">
                                 <div class="offer-card__circle"></div>
-                                <img markup-inline src="/img/rounder-blue.svg" alt="">
                                 <div class="offer-card__text">
                                     <div class="percents">12<span>%</span></div>
                                     <div class="profit">Daily Profit</div>
+                                    <div class="offer-card__rounder-wrap">
+                                        <img markup-inline src="/img/rounder-blue.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="offer-card__content">
@@ -175,10 +179,12 @@
                         <div class="offer-card">
                             <div class="offer-card__head">
                                 <div class="offer-card__circle"></div>
-                                <img markup-inline src="/img/rounder-pink.svg" alt="">
                                 <div class="offer-card__text">
                                     <div class="percents">12<span>%</span></div>
                                     <div class="profit">Daily Profit</div>
+                                    <div class="offer-card__rounder-wrap">
+                                        <img markup-inline src="/img/rounder-pink.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="offer-card__content">
@@ -508,7 +514,32 @@
         <a href="#">Audit</a>
         <a href="#">Contract</a>
         <a href="#">Social</a>
-        <a class="btn-yellow" href="#">Connect</a>
+        <a class="btn-yellow btn-connect" href="#">Connect</a>
+    </div>
+    <div class="connect-modal">
+        <div class="d-flex flex-row flex-wrap">
+            <div class="d-flex align-items-stretch py-2 wallet-btn-wrap">
+                <div class="wallet-btn" data-wallet="metamask">
+                    <img src="/img/metamask.svg">
+                    <div class="wallet-btn__title">Metamask</div>
+                    <div class="wallet-btn__description">Metamask, Dapper, Gnosis Safe, Frame, Web3 Browsers, etc</div>
+                </div>
+            </div>
+            <div class="d-flex align-items-stretch py-2 wallet-btn-wrap">
+                <div class="wallet-btn" data-wallet="walletconnect">
+                    <img src="/img/wc.svg">
+                    <div class="wallet-btn__title">WalletConnect</div>
+                    <div class="wallet-btn__description">Scan with WalletConnect to connect</div>
+                </div>
+            </div>
+            <div class="d-flex align-items-stretch py-2 wallet-btn-wrap">
+                <div class="wallet-btn" data-wallet="binancechain">
+                    <img src="/img/bsc.svg">
+                    <div class="wallet-btn__title">Binance Chain Wallet</div>
+                    <div class="wallet-btn__description">Connect to your Binance Chain Wallet</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -9,6 +9,12 @@
         max-width: 320px;
         margin: 25px auto;
     }
+    &__rounder-wrap{
+        height: 160px;
+        width: 160px;
+        margin-top: -93px;
+        position: relative;
+    }
     &__top{
         padding: 26px 60px 26px 60px;
         @include respondto(1200){ 
@@ -69,12 +75,7 @@
         position: relative;
         min-height:90px;
         & svg{
-            height: 160px;
-            width: 160px;
-            position: absolute;
-            top: -42px;
-            left: 53%;
-            transform: translate(-50%)
+            animation: rotate 2s linear infinite;
         }
     }
     &__circle{
@@ -93,6 +94,7 @@
         left: 50%;
         transform: translate(-50%);
         top: -10px;
+        text-align: center;
         & .percents{
             font-style: normal;
             font-weight: 800;
