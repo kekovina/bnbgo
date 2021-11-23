@@ -61,7 +61,7 @@ header{
 .header__mobile-menu-btn{
     display: none;
     cursor: pointer;
-    svg{
+    & svg{
         color: white;
         height: 64px;
         width: 35px;
